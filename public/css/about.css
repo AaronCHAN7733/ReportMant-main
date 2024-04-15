@@ -1,0 +1,405 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+
+body{
+    background: #A8EFD6;
+}
+
+/*Barra supedior de menu*/
+header{
+    z-index: 999;
+    position: fixed;
+    width: 100%;
+}
+
+header .nav-bar{
+    position: relative;
+    background: #05809F;
+    backdrop-filter: blur(20px);
+    height: 4em;
+    border-bottom: 1px solid  #05809F ;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 150px;
+    transition: 0.5s ease;
+}
+
+/*Letras de menu*/
+.navigation .nav-items a{
+    color: #A8EFD6;
+    font-size: 1em;
+    text-decoration: none;
+}
+
+/*Contenedor de la presentacion-texto*/
+section{
+    position: relative;
+    font-size: 1em;
+    padding: 30px 150px;
+    transition: 0.5s ease;
+    transition-property: padding;
+}
+
+
+
+/*Barra supedior movible*/
+.scroll-indicator-container{
+    width: 100%;
+    height: 5px;
+}
+
+.scroll-indicator-bar{
+    background: #199fff;
+    width: 0%;
+    height: 100%;
+    /*box-shadow: 0 5px 25px #199fff,
+                0 5px 50px #199fff;*/
+}
+
+.nav-close-btn, .nav-menu-btn{
+    display: none;
+}
+
+/*======= Media queries (max-width: 1100px) =======
+@media screen and (max-width: 1100px){
+    
+
+  header .nav-bar{
+        padding: 0 50px;
+    }
+
+    section{
+        padding: 30px 50px;
+        font-size: 0.9em;
+    }
+}
+
+/*======= Media queries (max-width: 850px) =======
+@media screen and (max-width: 850px) {
+    header .nav-bar {
+        padding: 0 20px;
+    }
+
+    section {
+        padding: 30px 20px;
+        font-size: 0.8em;
+    }
+
+}*/
+
+.logo {
+    height: 150px;
+  }
+
+  
+/* lista desplegable*/
+/*
+  .menu {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .menu li {
+    margin-left: 10px;
+  }*/
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #4DDFF0;
+    min-width: 160px;
+    border-radius: 15px;
+    /*box-shadow: 0 8px 16px 0 rgba(25, 12, 214, 0.678);*/
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: flex;
+    flex-direction: column;
+  }
+  /* fin de la lista desplaegable*/
+  
+
+/*narvar*/
+.opciones ul li{
+    font-size: 15px;
+    padding: 10px;
+    /*color: #fffdfc;*/
+    font-weight: 700;
+    list-style-type: none;
+    float: left;
+    margin-left: 55px;
+}
+
+.opciones ul li a:hover{
+    color: #7b87ce;
+}
+
+
+
+/* Nuevas cards para imagenes de los integrantes*/
+
+@import url("https://fonts.googleapis.com/css2?family=Figtree&display=swap");
+/*
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Figtree", sans-serif;
+  }*/
+
+body {
+
+  display: grid;
+  place-content: center;
+  min-height: 150vh;/*Si despues no funciona agregar padding: 40px;*/
+  background: #A8EFD6;
+  
+}
+
+.container {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  gap: 1em;
+  width: 800px;
+  height: 500px;
+  transition: all 400ms;
+  margin: 0 300px;
+}
+
+.container:hover .box {
+  filter: grayscale(100%) opacity(24%);
+}
+
+.box {
+  position: relative;
+  background: var(--img) center center;
+  background-size: cover;
+  transition: all 400ms;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.container .box:hover {
+  filter: grayscale(0%) opacity(100%);
+}
+
+.container:has(.box-1:hover) {
+  grid-template-columns: 3fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+.container:has(.box-2:hover) {
+  grid-template-columns: 1fr 3fr 1fr 1fr 1fr 1fr;
+}
+
+.container:has(.box-3:hover) {
+  grid-template-columns: 1fr 1fr 3fr 1fr 1fr 1fr;
+}
+
+.container:has(.box-4:hover) {
+  grid-template-columns: 1fr 1fr 1fr 3fr 1fr 1fr;
+}
+
+.container:has(.box-5:hover) {
+  grid-template-columns: 1fr 1fr 1fr 1fr 3fr 1fr;
+}
+.container:has(.box-6:hover) {
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 3fr;
+}
+
+
+
+.box:nth-child(odd) {
+  transform: translateY(-16px);
+}
+
+.box:nth-child(even) {
+  transform: translateY(16px);
+}
+
+.box::after {
+  content: attr(data-text);
+  position: absolute;
+  bottom: 20px;
+  background: #000;
+  color: #fff;
+  padding: 10px 10px 10px 14px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  transform: translateY(60px);
+  opacity: 0;
+  transition: all 400ms;
+}
+
+.box:hover::after {
+  transform: translateY(0);
+  opacity: 1;
+  transition-delay: 400ms;
+}
+
+
+.overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.box:hover .overlay {
+  opacity: 50;
+}
+
+/* fin de cards para imagenes de los integrantes*/
+
+/*texto*/
+.text h1{
+   
+    font-size: 3.5em;
+    font-weight: 600;
+    margin-top: 10px;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(45deg, #47BAED, #1e90ff); /* Cambiado a tonos de azul */
+    -webkit-background-clip: text;
+    color: transparent;
+    text-shadow: 2px 2px 4px #47BAED; /*Relleno de los tituols*/
+    text-align: center;
+    padding: 30px; /* Ajusta según sea necesario */
+}
+
+/*Texto de descripcion*/
+.text p{
+    color: #786F72;
+    font-size: 1em;
+    margin: 30px 0;
+}
+/*Fin de texto*/
+
+
+
+
+ /* fooder*/
+ @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900,900i&display=swap');
+
+ /*Diseñp de los iconos*/
+ *{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   text-decoration: none;
+   font-family: 'Source Sans Pro', sans-serif;
+}
+
+/*Distancia del fooder hacia el body*/ 
+.container-footer{
+   width: 100%;
+   padding: 40px 30;
+   background: #64D8CB;
+   margin-top: 170px;
+   margin: 0;
+   padding: 40px;
+   box-sizing: border-box;
+   text-decoration: none;
+   font-family: 'Source Sans Pro', sans-serif;
+}
+
+/*
+.container-footer footer{
+   max-width: 1200px;
+   margin: auto;
+}*/
+
+/*Ubicacion de los iconos*/
+.container-footer footer .redes-footer{
+   display: flex;
+   justify-content: center;
+   margin-top: 20px;
+   top: 0;
+   left: 50%;
+}
+
+/*Contenedor de iconos*/
+.container-footer footer .redes-footer .icon-redes-footer{
+   font-size: 20px;
+   margin: 20px;
+   background: #f7f7f7;
+   width: 50px;
+   height: 50px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   border-radius: 100%;
+   color: #706f74;
+}
+
+footer .redes-footer .fa-facebook-f:hover{
+   background: #392ed3;
+   color: #ffffff;
+}
+
+
+footer .redes-footer .fa-google-plus-g:hover{
+   background: #de4c34;
+   color: #ffffff;
+}
+
+footer .redes-footer .fa-instagram:hover{
+   background: linear-gradient(to top right, #fcde30, #e9712a, #d2313b);
+   color: #ffffff;
+}
+.container-footer footer hr{
+   margin-top: 20px;
+   border: none;
+   height: 2px;
+   background: #f1f1f1;
+}
+
+/*Latras de footer*/
+.container-footer h4{
+   text-align: center;
+   margin-top: 40px;
+   color: #8e8e8e;
+   font-weight: 500;
+
+}
+
+
+
+/*para el degradado*/
+.separation{
+
+ /*z-index: 888*/
+   content: '';
+   position: static;
+   width: 100%;
+   height: 80px;
+  
+   background: linear-gradient(transparent, #64D8CB);
+   left: 100px;
+
+}
+
+
+.footer-img{
+ display: flex;
+ margin-left: auto;
+ margin-right: auto;
+ width: 200px;
+ height: 200px;
+ 
+}
+/*Fin de footer*/
+
+
+
+
+

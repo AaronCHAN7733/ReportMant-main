@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/41bcea2ae3.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="resources/css/contact.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <title>Contacto</title>
+</head>
+<body>
+
+    <header>
+        <div class="nav-bar">
+            <a href="/">
+                <img src="resources/img/reportmant.png" class="logo">
+            </a>
+            <div class="navigation">
+                <div class="nav-items">
+                    <i class="uil uil-times nav-close-btn"></i>
+                    <div class="opciones">
+                        <ul>
+                            <li><a href="/">Home</a></li>
+                            <li><a href="about">About us</a></li>
+                            <li><a href="contact">Contact</a></li>
+                            <li><a href="formulario">Form</a></li>
+                            <li><a href="follow">Follow-up</a></li>
+                            <li><a href="record">Record</a></li>
+
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <i class="uil uil-apps nav-menu-btn"></i>
+        </div>
+        <div class="scroll-indicator-container">
+            <div class="scroll-indicator-bar"></div>
+        </div>
+    </header>
+
+    <div class="contact-section">
+        <div class="contact-container">
+            <img src="resources/img/reportmant.png" alt="Profile Picture" class="profile-image">
+            <div class="contact-info">
+                <section id="contacto">
+
+                  <form action="https://api.web3forms.com/submit" method="POST" id="form">
+                    <input type="hidden" name="access_key" value="e9741301-b57f-4a34-9edf-148bf8278ebc" />
+                    <input type="hidden" name="subject" value="New Submission from Web3Forms" />
+
+
+                    <label for="name">Name:</label><br>
+                    <input type="text" id="name" name="name" required><br>
+                    <label for="email">Email:</label><br>
+                    <input type="email" id="email" name="email" required><br>
+                    <label for="message">Message:</label><br>
+                    <textarea id="message" name="message" required></textarea><br>
+                    <input type="submit" id="miBoton" value="Send">
+
+
+
+                    </form>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <div class="separation"></div>
+    <div class="container-footer">
+
+        <footer>
+
+            <div class="footer-img">
+                <img src="resources/img/reportmant.png" alt="">
+            </div>
+            <div class="redes-footer">
+                <a href="#"><i class="fab fa-facebook-f icon-redes-footer"></i></a>
+                <a href="#"><i class="fab fa-google-plus-g icon-redes-footer"></i></a>
+                <a href="#"><i class="fab fa-instagram icon-redes-footer"></i></a>
+            </div>
+            <hr>
+            <h4>Copyright ReporMant - All rights reserved</h4>
+
+        </footer>
+    </div>
+
+
+
+    <script src="resources/js/contact.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <link rel="stylesheet" href="resources/css/formulario.css">
+    <script src="https://kit.fontawesome.com/41bcea2ae3.js" crossorigin="anonymous"></script>
+    <title>Create Report</title>
+</head>
+<body>
+    <header>
+        <div class="nav-bar">
+          <a href="/">
+            <img src="resources/img/reportmant.png" class="logo">
+          </a>
+            <div class="navigation">
+      
+              <div class="nav-items">
+                <i class="uil uil-times nav-close-btn"></i>
+                <div class="opciones">
+                  <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="about">About us</a></li>
+                    <li><a href="contact">Contact</a></li>
+                    <li><a href="formulario">Form</a></li>
+                    <li><a href="follow">Follow-up</a></li>
+                    <li><a href="record">Record</a></li>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+      
+            </div>
+            <i class="uil uil-apps nav-menu-btn"></i>
+          </div>
+          <div class="scroll-indicator-container">
+            <div class="scroll-indicator-bar"></div>
+          </div>
+        </header>
+
+        <h1>Create Report</h1>
+
+
+    <div class="hoja">
+    
+    <form id="reporteForm">
+        <label for="tipoReporte">Report Type:</label>
+        <select id="tipoReporte" name="tipoReporte">
+            <option value="preventivo">Preventive</option>
+            <option value="correctivo">Corrective</option>
+        </select>
+        <br><br>
+
+        <label for="fechaInicio">Date:</label>
+        <input type="date" id="fechaInicio" name="fechaInicio">
+        <br><br>
+
+        <div class="ubicacion">
+        <div class="form3">
+        
+            <div>
+            <label for="edificio">Building:</label>
+            <input type="text" id="edificio" name="edificio">
+            </div>
+           
+
+            <div>
+            <label for="planta">Plant:</label>
+            <input type="text" id="planta" name="planta">
+            </div>
+
+            <div>
+            <label for="salon">Classroom:</label>
+            <input type="text" id="salon" name="salon">
+            </div>
+
+            <div>
+            <label for="referencia">Reference</label>
+            <input type="text" id="referencia" name="referencia">
+            
+        </div>
+        </div>
+       
+
+        <br><br>
+
+      
+        <label for="">Department Type:</label>
+        <select id="tipodepartamanto" name="tipodepartamento">
+            <option value="limpieza">Cleaning</option>
+            <option value="administracion">maintenance</option>
+            <option value="biblioteca">Systems</option>
+        </select>
+        <br><br>
+
+        <label for="problema">Problem:</label>
+        <textarea id="problema" name="problema" rows="4" cols="50"></textarea>
+        <br><br>
+        <span id="count"></span> <!-- Añadir el contador de caracteres aquí -->
+        <br><br>
+        <input type="submit" value="Create report" onclick="Mensaje()">
+        
+    </form>
+   </div>
+   </div>
+   
+
+
+   <div class="separation"></div>
+   <div class="container-footer">
+ 
+     <footer>
+       <div class="footer-img">
+         <img src="resources/img/reportmant.png" alt="">
+       </div>
+       <div class="redes-footer">
+         <a href="#"><i class="fab fa-facebook-f icon-redes-footer"></i></a>
+         <a href="#"><i class="fab fa-google-plus-g icon-redes-footer"></i></a>
+         <a href="#"><i class="fab fa-instagram icon-redes-footer"></i></a>
+       </div>
+       <hr>
+       <h4>Copyright ReporMant - All rights reserved</h4>
+ 
+     </footer>
+
+
+
+
+<script src="resources/js/formulario.js"></script>
+</body>
+</html>
